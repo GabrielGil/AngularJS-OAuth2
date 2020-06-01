@@ -79,8 +79,8 @@
 				service.token = setTokenFromHashParams(trustedTokenHash);
 			}
 			else if ($location.$$html5) {
-				if ($location.path().length > 1) {
-					var values = $location.path().substring(1);
+				if ($location.hash()) {
+					var values = $location.hash();
 					service.token = setTokenFromHashParams(values);
 					if (service.token) {
 						parsedFromHash = true;
